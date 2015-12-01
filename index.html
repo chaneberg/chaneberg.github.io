@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <title>chaneberg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <p>When you start or finish a coding session, do the following:</p>
-    <ol>
-      <li>When starting a coding session, you might want to check for pull requests on GitHub. Merge them so you aren't modifying old code.</li>
-      <li>Open Git Shell</li>
-      <li><code>cd &lt;path of your working directory&gt;</code></li>
-      <li>Make sure you are on your own branch (the current branch is displayed in the prompt)</li>
-      <li><code>git pull</code></li>
-      <li><code>git merge origin/dev</code></li>
-      <li>If there are conflicts, fix them by editing the files with a text editor</li>
-      <li><code>git add -A</code></li>
-      <li><code>git commit -m "&lt;some commit message&gt;"</code></li>
-      <li><code>git push</code></li>
-    </ol>
-    <p>At any time during these steps, you can use <code>git status</code> to see what's going on with git.</p>
-    <p>When you finish a feature, make a pull request:</p>
-    <ol>
-      <li>Go to <a href="https://github.com/GFUCABAM/statler">https://github.com/GFUCABAM/statler</a></li>
-      <li>Select your branch from the drop-down</li>
-      <li>Click "Pull request"</li>
-    </ol>
-    <p><img src="https://camo.githubusercontent.com/e98c7b929ee83e46ac1fd3e366d6b4d31fb00e05/687474703a2f2f696d67732e786b63642e636f6d2f636f6d6963732f6769742e706e67" alt="" data-canonical-src="http://imgs.xkcd.com/comics/git.png"></p>
-    <h3><a id="user-content-notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h3>
-    <p>If <code>git push</code> gives you a long message starting with <code>warning: push.default is unset</code>, enter <code>git config --global push.default simple</code>.</p>
-    <p>You can make aliases for git commands. See <a href="http://gitimmersion.com/lab_11.html">http://gitimmersion.com/lab_11.html</a>.</p>
-    <p>You can use <code>git log --graph --pretty=oneline</code> to see a graph of git commits.</p>
-    <p><a href="https://github.com/GFUCABAM/statler/network">Here</a>'s the git branch graph. I also created my own version <a href="https://github.com/GFUCABAM/statler/wiki/Git-Branch-Graph">here</a> because the auto-generated one is confusing.</p>
+    <div class="content">
+      <h1>How to Use Git</h1>
+      <p>When you start or finish a coding session, do the following:</p>
+      <ol>
+        <li>When starting a coding session, you might want to check for pull requests on GitHub. Merge them so you aren't modifying old code.</li>
+        <li>Open Git Shell</li>
+        <li><code>cd &lt;path of your working directory&gt;</code></li>
+        <li>Make sure you are on your own branch (the current branch is displayed in the prompt)</li>
+        <li><code>git pull</code></li>
+        <li><code>git merge origin/dev</code></li>
+        <li>If there are conflicts, fix them by editing the files with a text editor</li>
+        <li><code>git add -A</code></li>
+        <li><code>git commit -m "&lt;some commit message&gt;"</code></li>
+        <li><code>git push</code></li>
+      </ol>
+      <p>At any time during these steps, you can use <code>git status</code> to see what's going on with git.</p>
+      <p>When you finish a feature, make a pull request:</p>
+      <ol>
+        <li>Go to <a href="https://github.com/GFUCABAM/statler">https://github.com/GFUCABAM/statler</a></li>
+        <li>Select your branch from the drop-down</li>
+        <li>Click "Pull request"</li>
+      </ol>
+      <img src="https://camo.githubusercontent.com/e98c7b929ee83e46ac1fd3e366d6b4d31fb00e05/687474703a2f2f696d67732e786b63642e636f6d2f636f6d6963732f6769742e706e67" alt="" data-canonical-src="http://imgs.xkcd.com/comics/git.png">
+      <h2>Notes</h2>
+      <p>If <code>git push</code> gives you a long message starting with <code>warning: push.default is unset</code>, enter <code>git config --global push.default simple</code>.</p>
+      <p>You can make aliases for git commands. See <a href="http://gitimmersion.com/lab_11.html">http://gitimmersion.com/lab_11.html</a>.</p>
+      <p>You can use <code>git log --graph --pretty=oneline</code> to see a graph of git commits.</p>
+      <p><a href="https://github.com/GFUCABAM/statler/network">Here</a>'s the git branch graph. I also created my own version <a href="https://github.com/GFUCABAM/statler/wiki/Git-Branch-Graph">here</a> because the auto-generated one is confusing.</p>
+    </div>
   </body>
 </html>

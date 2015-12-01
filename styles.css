@@ -1,6 +1,46 @@
 body {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
+  color: #333;
   line-height: 1.6;
   word-wrap: break-word;
+  padding: 0px;
+  margin: 0px;
 }
+
+.content {
+  max-width: 1000px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+code, pre {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+  padding: 0.2em 0.3em;
+  margin: 0px;
+}
+
+a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-left: -15px;
+}
+
+h1 {font-size: 30px;}
+h2 {font-size: 24px;}
+h3 {font-size: 19px;}
+h4 {font-size: 15px;}
+h5 {font-size: 12px;}
+h6 {font-size: 10px;}
