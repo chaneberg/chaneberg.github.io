@@ -43,6 +43,13 @@ img {
   height: auto;
 }
 
+canvas {
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 100%;
+  height: 90vh;
+}
+
 a {
   color: #4078c0;
   text-decoration: none;
