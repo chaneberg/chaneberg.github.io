@@ -8,7 +8,10 @@ canvas.addEventListener('mousemove', penMove);
 canvas.addEventListener('mouseup', penUp);
 canvas.addEventListener('mouseleave', penLeave);
 
-canvas.addEventListener("touchstart", function(e) penDown(e.touches[0]));
+canvas.addEventListener("touchstart", function(e) {
+  e.preventDefault();
+  penDown(e.touches[0]);
+});
 canvas.addEventListener("touchmove", function(e) penMove(e.touches[0]));
 canvas.addEventListener("touchend", function(e) penUp(e.touches[0]));
 canvas.addEventListener("touchleave", function(e) penLeave(e.touches[0]));
