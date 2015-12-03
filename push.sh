@@ -1,3 +1,4 @@
+#!C:\Users\Charles\AppData\Local\GitHub\GitHub.appref-ms --open-shell
 set -x
 echo "Enter commit message: "
 read message
