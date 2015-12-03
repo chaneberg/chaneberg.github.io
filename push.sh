@@ -1,4 +1,4 @@
-echo -e "\033[0;31mEnter commit message: \033[0m"
+echo -e "\033[0;31mEnter commit message:\033[0m"
 read message
 
 echo -e "\033[0;31mgit add -A\033[0m"
