@@ -1,0 +1,38 @@
+#container {
+  border: 1px solid #999;
+  border-radius: 10px;
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  display: block;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#sidebar {
+  width: 200px;
+  height: 600px;
+  float: right;
+  position: relative;
+}
+
+#color-swatch {
+  width: 150px;
+  height: 150px;
+  margin: 25px;
+}
+
+#color-text {
+  font-family: monospace;
+  font-size: 22pt;
+  margin: 25px;
+}
+
+p {
+  font-family: sans-serif;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  text-align: justify;
+}
