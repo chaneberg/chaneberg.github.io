@@ -4,5 +4,5 @@ read message
 git add -A
 git commit -m "$message"
 git push
-echo Press enter...
+echo Press enter to close...
 read
