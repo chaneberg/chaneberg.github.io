@@ -1,4 +1,4 @@
-const scrollSpeed = .1;
+const scrollSpeed = .03;
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var colorSwatch = document.getElementById('color-swatch');
@@ -23,7 +23,7 @@ canvas.addEventListener('mousemove', function(event) {
 });
 
 canvas.addEventListener('wheel', function(event) {
-  zoomRatio = Math.exp(scrollSpeed*event.deltaY);
+  zoomRatio = Math.exp(scrollSpeed*(event.deltaY > 0 ? 1 : -1));
   scale *= zoomRatio;
   xMin = event.offsetX - (event.offsetX - xMin) * zoomRatio;
   yMin = event.offsetY - (event.offsetY - yMin) * zoomRatio;
