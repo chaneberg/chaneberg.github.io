@@ -1,4 +1,4 @@
-set -vx
+set -x
 echo "Enter commit message in quote marks: "
 read message
 git add -A
