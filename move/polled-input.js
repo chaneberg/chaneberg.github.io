@@ -1,0 +1,5 @@
+polledInput = {
+    trackKeys: function() {
+    
+    }
+}
