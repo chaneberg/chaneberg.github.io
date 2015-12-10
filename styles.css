@@ -45,7 +45,7 @@ img {
 
 canvas {
   border: 1px solid #999;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
   height: 90vh;
 }
@@ -74,3 +74,18 @@ h3 {font-size: 19px;}
 h4 {font-size: 15px;}
 h5 {font-size: 12px;}
 h6 {font-size: 10px;}
+
+kbd {
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 2px #FFF inset;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0px 0.1em;
+  text-shadow: 0px 1px 0px #FFF;
+  line-height: normal;
+  white-space: nowrap;
+}

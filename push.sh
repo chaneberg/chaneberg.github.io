@@ -1,3 +1,6 @@
+echo -e "\033[0;31mgit status\033[0m"
+git status
+
 echo -e "\033[0;31mEnter commit message:\033[0m"
 read message
 
