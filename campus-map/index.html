@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="602" height="814"></canvas>
+    <script>
+      function getCSV(site, callback) {
+        var yql = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from csv where url="' + site + '"') + '&format=json&callback=?';
+        $.getJSON(yql, function(data){
+            callback(data.query.results.row);
+        });
+      }
+
+      getCSV('https://docs.google.com/spreadsheets/d/1VELEbuLOeUVLD9jGCY41WL__mXGG0e2tPqO5b1X0jL4/export?format=csv&gid=964293465', function(edges){
+        getCSV('https://docs.google.com/spreadsheets/d/1VELEbuLOeUVLD9jGCY41WL__mXGG0e2tPqO5b1X0jL4/export?format=csv&gid=2009675124', function(nodes){
+          $.getJSON('node locations.json', function(locations) {
+            var newEdges = [];
+            for (var edge of edges) {
+              newEdges.push({source:edge.col0, destination:edge.col1, weight:edge.col2});
+            }
+            var newNodes = {};
+            for (node of nodes) {
+              newNodes[node.col0] = locations[node.col0];
+            }
+
+            var image = new Image();
+            image.src = 'campus-map.png';
+            image.onload = function() {draw(newEdges,newNodes,image)};
+          });
+        });
+      });
+
+      function draw(edges,nodes,image) {
+        canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+
+        ctx.drawImage(image,0,0);
+
+        for (edge of edges) {
+          var s = nodes[edge.source];
+          var d = nodes[edge.destination];
+          ctx.beginPath();
+          ctx.moveTo(s.x,s.y);
+          ctx.lineTo(d.x,d.y);
+          ctx.lineWidth = 3;
+          ctx.strokeStyle = 'white';
+          ctx.stroke();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = 'black';
+          ctx.stroke();
+        }
+
+        for (var node in nodes) {
+          ctx.fillStyle = 'white';
+          ctx.fillRect(nodes[node].x-3.5,nodes[node].y-3.5,7,7);
+          ctx.fillStyle = 'black';
+          ctx.fillRect(nodes[node].x-3,nodes[node].y-3,6,6);
+        }
+      }
+    </script>
+  </body>
+</html>
