@@ -59,6 +59,22 @@
           ctx.fillStyle = 'black';
           ctx.fillRect(nodes[node].x-3,nodes[node].y-3,6,6);
         }
+
+        ctx.font = '8px Arial';
+
+        for (edge of edges) {
+          var s = nodes[edge.source];
+          var d = nodes[edge.destination];
+          ctx.strokeStyle = 'white';
+          ctx.strokeText(edge.weight, (s.x+d.x)/2, (s.y+d.y)/2);
+        }
+
+        for (edge of edges) {
+          var s = nodes[edge.source];
+          var d = nodes[edge.destination];
+          ctx.fillStyle = 'black';
+          ctx.fillText(edge.weight, (s.x+d.x)/2, (s.y+d.y)/2);
+        }
       }
     </script>
   </body>
