@@ -22,6 +22,8 @@ function join(sessionid) {
             console.log('error');
         }
     });
+    var button = $('#'+sessionid);
+    button.html(parseInt(button.html()) + 1);
     var button = $('#create-or-join');
     button.html('Create');
     button.removeClass('join');

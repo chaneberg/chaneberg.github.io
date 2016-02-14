@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  setInterval(refresh, 5000);
+  //setInterval(refresh, 5000);
   refresh();
 });
 
@@ -13,7 +13,7 @@ function refresh() {
         $.each(sessions, function(index, session) {
           var size = Math.sqrt(session.count)*10+10;
           $('#map').append(
-            '<button class="join-button" style="left: '+session.location.x+'px; top: '+session.location.y+'px; width: '+size+'px; height: '+size+'px; border-radius: '+size/2+'px; background: '+course.color+';" onclick="show_join_button('+session.id+')">'+session.count+'</button>'
+            '<button class="join-button" id="'+session.id+'" style="left: '+session.location.x+'px; top: '+session.location.y+'px; width: '+size+'px; height: '+size+'px; border-radius: '+size/2+'px; background: '+course.color+';" onclick="show_join_button('+session.id+')">'+session.count+'</button>'
           );
         });
       });
