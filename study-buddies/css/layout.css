@@ -1,0 +1,27 @@
+#map, #hud, #create {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#map {
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background-image: url(campus-map.png);
+	background-repeat: no-repeat;
+}
+
+#hud {
+	left: 0;
+	bottom: 0;
+	height: 30%;
+	z-index: 10;
+}
+
+#create {
+	left: 0;
+	top: 0;
+	z-index: 20;
+	display: none;
+}

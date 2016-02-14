@@ -37,6 +37,10 @@
         canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
 
+        /*for (node of Object.keys(nodes)) {
+          document.body.innerHTML += node+','+nodes[node].x+','+nodes[node].y+'<br>'
+        }*/
+
         ctx.drawImage(image,0,0);
 
         for (edge of edges) {

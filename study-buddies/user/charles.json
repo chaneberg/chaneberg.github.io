@@ -1,0 +1,15 @@
+{
+    "courses": [
+        {
+            "course": "CSIS 201",
+            "color": "#ff8888"
+        },
+        {
+            "course": "ENGR 200",
+            "color": "#88ff88"
+        },
+        {
+            "course": "SIDE 001",
+            "color": "#8888ff"
+        }]
+}

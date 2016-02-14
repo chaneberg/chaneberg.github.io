@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="UTF-8">
+	<title>Study Buddies :-)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/load.js"></script>
+	<script src="js/join.js"></script>
+	<script src="js/refresh.js"></script>
+	<script src="js/create.js"></script>
+</head>
+
+<body>
+	<div id="map">
+		Map
+	</div>
+	<div id="hud">
+		<button id="create-or-join" class="create" onclick="$('#create').show(200)">Create</button>
+		<button id="course-button-0" class="course-button"></button>
+		<button id="course-button-1" class="course-button"></button>
+		<button id="course-button-2" class="course-button"></button>
+		<button id="course-button-3" class="course-button"></button>
+		<button id="course-button-4" class="course-button"></button>
+		<button id="course-button-5" class="course-button"></button>
+	</div>
+	<div id="create">
+		<select id="course-selector">
+		</select>
+		<button id="create-session" onclick="$('#create').hide(200); create_session()">Create Study Session</button>
+		<button id="schedule-sesssion">Schedule Future Session</button>
+	</div>
+</body>
+
+</html>

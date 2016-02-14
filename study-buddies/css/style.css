@@ -1,0 +1,72 @@
+button {
+	border: 2px solid rgba(255, 255, 255, 0);
+	border-radius: 3px;
+	background: rgba(64, 64, 64, 0.8);
+	color: white;
+	font-weight: bold;
+}
+
+/* Heads up Display */
+
+#hud button {
+	position: absolute;
+}
+
+#create-or-join {
+	width: 98%;
+	height: 38%;
+	left: 1%;
+	top:1%;
+}
+
+.course-button {
+	width: 48%;
+	height: 18%;
+}
+
+#course-button-0 {
+	left: 1%;
+	top: 41%;
+}
+
+#course-button-1 {
+	left: 51%;
+	top: 41%;
+}
+
+#course-button-2 {
+	left: 1%;
+	top: 61%;
+}
+
+#course-button-3 {
+	left: 51%;
+	top: 61%;
+}
+
+#course-button-4 {
+	left: 1%;
+	top: 81%;
+}
+
+#course-button-5 {
+	left: 51%;
+	top: 81%;
+}
+
+/* Create Pane */
+#create {
+	background-color: rgba(128, 128, 128, 1.0);
+}
+
+#create button, #create select {
+	width: 98%;
+	height: 12%;
+	margin: 1% 1% 1% 1%;
+}
+
+.join-button {
+    position: absolute;
+    border: 0px;
+    color: white;
+}
