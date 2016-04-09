@@ -10,7 +10,6 @@ var asteroidMinRadius = 10;
 var cheatMode = false;
 
 canvas.style.background = 'black';
-ctx.fillStyle = 'white';
 canvas.setAttribute("tabindex", 1);
 canvas.focus();
 polledInput.trackKeys(37,38,39,40);
@@ -41,6 +40,7 @@ function update() {
   for(laserBeam of laserBeams) {
     laserBeam.update();
   }
+  ctx.fillStyle = 'white';
   ctx.fillText('Asteroid Min Size: ' + asteroidMinRadius, 5, 15);
 }
 
