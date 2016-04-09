@@ -34,8 +34,7 @@ body {
 }
 
 .panel p {
-  margin: 0px;
-  padding: 0px;
+  margin: 1px 0px;
 }
 
 button, input {
@@ -61,6 +60,11 @@ code, pre {
 
 pre {
   white-space: pre-wrap;
+}
+
+.fine {
+  font-size: 12px;
+  color: #aaa;
 }
 
 img {
