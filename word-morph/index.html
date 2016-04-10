@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Word Morph · Charles Haneberg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="content">
+        <a href="/">Home</a> &gt; <a href="/word-morph">Word Morph</a>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Word Morph</h1>
+      <p>
+        There's a game where you try to turn one word into another by changing
+        only one letter at a time. Letters can be added, removed, or changed
+        in place, but all intermediate steps must be real words. For example,
+        you can get from "cat" to "dog" by doing "cat, cot, dot, dog".
+      </p>
+      <p>
+        This applet solves the game for any pair of words. It uses a <i>breadth
+        first search</i> to find one of the shortest possible solutions.
+      </p>
+      <br>
+      <form id="form">
+        Start word:<br>
+        <input type="text" name="startWord"><br>
+        End word:<br>
+        <input type="text" name="endWord"><br>
+        <input type="button" onClick="wordMorph()" value="Go!"><br>
+      </form>
+      <p id="result"></p>
+      <script src="word-morph.js"></script>
+    </div>
+  </body>
+</html>
