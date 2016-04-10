@@ -7,8 +7,8 @@ getJSON('words.json', function(wordList) {
 });
 
 onmessage = function(message) {
-  startWord = message.data[0];
-  endWord = message.data[1];
+  startWord = message.data[0].toLowerCase();
+  endWord = message.data[1].toLowerCase();
 
   if (words.has(startWord) && words.has(endWord)) {
     if (startWord.length >= endWord.length) {
