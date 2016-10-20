@@ -31,6 +31,12 @@
   margin: 25px 50px;
 }
 
+.diagnostic-print {
+  text-align: left;
+  color: black;
+  font-size: 14px;
+}
+
 table {
   border: none;
   border-collapse: collapse;
