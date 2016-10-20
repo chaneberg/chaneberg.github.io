@@ -37,16 +37,32 @@ body {
   margin: 1px 0px;
 }
 
-button, input {
+input, button {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
   background-color: #f5f5f5;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   padding: 10px 15px;
   margin: 10px 0px;
+  /*-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;*/
 }
 
-button:hover, input:hover {
+input:hover, button:hover {
   background-color: #e5e5e5;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px #48beef;
+  border: 1px solid #48beef;
+}
+
+input[type=button]:active, button:active {
+  background-color: #d5d5d5;
 }
 
 code, pre {

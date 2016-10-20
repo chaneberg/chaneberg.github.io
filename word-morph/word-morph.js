@@ -3,7 +3,7 @@ resultArea = document.getElementById('result');
 theWorker = new Worker("word-morph-worker.js");
 
 function wordMorph() {
-  resultArea.innerHTML = '<img src="loading.gif">';
+  resultArea.innerHTML = '<img src="/loading.gif">';
 
   theWorker.postMessage([form.startWord.value, form.endWord.value]);
 }

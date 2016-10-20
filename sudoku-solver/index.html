@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sudoku Solver · Charles Haneberg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="content">
+        <a href="/">Home</a> &gt; <a href="/sudoku-solver">Sudoku Solver</a>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Sudoku Solver</h1>
+      <p>
+        Description will go here.
+        <a href="https://github.com/chaneberg/chaneberg.github.io/tree/master/sudoku-solver" target="_blank">View Source</a>
+      </p>
+
+
+      <div class="panel" style="text-align: center">
+        <form id="input-board" class="column">
+          <table>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+            <tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+          </table>
+        </form>
+        <form id="output-board" class="column">
+          <div class="overlay-area">
+            <div id="spinner" class="overlay">
+              <div class="center"><img src="/loading.gif"></div>
+            </div>
+            <div id="invalid-input-message" class="overlay">
+              <div class="center">Invalid Input</div>
+            </div>
+            <div id="no-solution-message" class="overlay">
+              <div class="center">No Solution</div>
+            </div>
+            <table>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+              <tr><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td><td><input disabled></td></tr>
+            </table>
+          </div>
+          <p style="text-align: left">
+            Recursive calls: <span id="calls"></span><br>
+            Time: <span id="time"></span>
+          </p>
+        </form>
+      </div>
+      <script src="sudoku-solver.js"></script>
+      <script src="arrow-keys.js"></script>
+
+
+    </div>
+  </body>
+</html>
